@@ -18,7 +18,5 @@ int main(){
         printf("%d is not a Leap Year \n",year);
     
     ((year % 400 == 0) ||(year % 4 == 0 && year % 100 != 0))? printf("Leap Year") : printf("Not a Leap Year");
-
-
     return 0;
 }
