@@ -3,6 +3,7 @@
 int main(){
     float num1 , num2 , result;
     int choice;
+    START:    //this is label"START"
     printf("Enter the Numbers: \n");
     scanf("%f%f",&num1,&num2);
     printf("1-Addition\n2-Substraction\n3-Multiplication\nEnter Your Choice: ");
@@ -14,19 +15,25 @@ int main(){
         result=num1+num2;
         printf("Result=%.2f",result);
         break;
-    }
+        }
     case 2:{
         result=num1-num2;
         printf("Result=%.2f",result);
         break;
-    }
+        }
     case 3:{
         result=num1*num2;
         printf("Result=%.2f",result);
         break;
-    }
+        }
     default:
         printf("Invalid choice");
         break;
     }
+    printf("\n0-Exist\n1-Repeat\nEnter your Choice: ");
+    scanf("%d",&choice);
+    if (choice!=0)
+        goto START;
+    return 0;
+
 }
